@@ -1,9 +1,11 @@
 - Scrapes public profile from RunKeeper.com for activity status
+  Modify user_id variable in the python script to the number from your 
+  runkeeper profile url (918702334)
+  http://runkeeper.com/user/918702334/profile
 
 - Gives a score of $calorie * $factor. 
   where $calorie is from runkeeper.com 
-        $factor is set as 20. 
-  both parameters can be changed in the python script.
+        $factor is set as 20.  This can be changed in the python script.
 
 - Updates scores when screen is comes out of screensaver (lockscreen)
 
