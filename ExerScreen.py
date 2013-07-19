@@ -65,6 +65,10 @@ while True :
       scoreSession = fileio( 'score' , 'r' , 0 ) - timeDiff
       commands.getoutput( 'notify-send "Time Left" '+ str( scoreSession ) )
       _ = fileio( 'score' , 'w', scoreSession )
+      if scoreSession < 0 :
+        commands.getoutput( 'notify-send "Switching off the screen" "Bob, you need to go exercise"')
+        commands.getoutput( 'sleep 5' )
+        commands.getoutput( 'gnome-screensaver-command -l' )
     else :
       commands.getoutput( 'sleep 2' )
   else :
