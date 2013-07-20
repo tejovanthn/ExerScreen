@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import urllib
 import commands
 from bs4 import BeautifulSoup as bsoup
@@ -72,7 +73,10 @@ while True :
     else :
       commands.getoutput( 'sleep 2' )
   else :
-    state = "active"
-    stopTime = commands.getoutput( 'date +"%s"' )
-    timeDiff = int( stopTime ) - int( startTime )
+    if state == "active" :
+      commands.getoutput( 'sleep 2' )
+    else :
+      state = "active"
+      stopTime = commands.getoutput( 'date +"%s"' )
+      timeDiff = int( stopTime ) - int( startTime )
 
